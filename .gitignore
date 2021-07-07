@@ -1,9 +1,16 @@
+#relatorios mocha
+mochawesome-report
+
 # Node
 node_modules
 package-lock.json
 
-# Cypress
-cypress/screenshots
+# relatorios cucumber
+cypress/reports/cucumber_report.html
+cypress/reports/cucumber_report.html.json
+cypress/reports/cucumber-json/**
+
+#videos
 cypress/videos
 
 # Misc
