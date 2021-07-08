@@ -1,27 +1,20 @@
 
+
 Given(/^que acesso o site$/, () => {
-	cy.server()
-        cy.route({
-            method: 'POST',
-            url: '**/api/1/databases/userdetails/collections/newtable?**',
-            status: 200,
-            response: {}
-        }).as('postNewtable');
+    cy.intercept('POST', '**/api/1/databases/userdetails/collections/newtable?**', {
+        statusCode: 200,
+        body: {}
+      }).as('postNewtable');
+  
+      cy.intercept('POST', '**/api/1/databases/userdetails/collections/usertable?**', {
+        statusCode: 200, 
+        body: {}
+      }).as('postUsertable');
+  
+      cy.intercept('GET', '**/api/1/databases/userdetails/collections/newtable?**', {
+        statusCode: 200,
+        body: {}
+      }).as('getNewtable');
 
-        cy.route({
-            method: 'POST', 
-            url: '**/api/1/databases/userdetails/collections/usertable?**', 
-            status: 200, 
-            response: {}
-        }).as('postUsertable');
-
-        cy.route({
-            method: 'GET',
-            url: '**/api/1/databases/userdetails/collections/newtable?**',
-            status: 200,
-            response: {}
-        }).as('getNewtable');
-
-
-        cy.visit('Register.html');
-})
+      cy.visit('Register.html');
+});
