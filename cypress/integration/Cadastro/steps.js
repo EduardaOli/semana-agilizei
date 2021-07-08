@@ -56,7 +56,7 @@ When(/^informar meus dados$/, () => {
 	
 });
 
-When(/^salvar$/, () => {
+And(/^salvar$/, () => {
     cy.get('button#submitbtn').click();
 	
 });

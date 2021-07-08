@@ -6,7 +6,7 @@ Funcionalidade: Cadastro
 
 Cenario: Cadastrar de novo usuário
     Dado que acesso o site
-    Quando  informar meus dados
+    Quando informar meus dados
     E salvar
     Entao devo ser cadastrado com sucesso
 
