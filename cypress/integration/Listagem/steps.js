@@ -2,8 +2,11 @@
 
 
 Given(/^que o site não possui registro$/, () => {
-    cy.intercept('GET', '**/api/1/databases/userdetails/collections/newtable?**', {
-        statusCode: 200,
+    cy.server()
+    cy.route({
+        method: 'GET',
+        url: '**/api/1/databases/userdetails/collections/newtable?**',
+        status: 200,
         response: 'fx:webtable-get-vazio',
     }).as('getNewtable');
 });
@@ -18,10 +21,13 @@ Then(/^devo visualizar a listagem vazia$/, () => {
 
 
 Given(/^que o site possui apenas um registro$/, () => {
-    cy.intercept('GET', '**/api/1/databases/userdetails/collections/newtable?**', {
-        statusCode: 200,
+    cy.server()
+    cy.route({
+        method: 'GET',
+        url: '**/api/1/databases/userdetails/collections/newtable?**',
+        status: 200,
         response: 'fx:webtable-get-unico'
-    })
+    }).as('getNewtable');
 
 });
 

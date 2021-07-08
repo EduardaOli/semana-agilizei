@@ -6,8 +6,8 @@ node_modules
 package-lock.json
 
 # relatorios cucumber
-cypress/reports/cucumber_report.html
-cypress/reports/cucumber_report.html.json
+cypress/reports/index.html
+cypress/reports/index.json
 cypress/reports/cucumber-json/**
 
 #videos
