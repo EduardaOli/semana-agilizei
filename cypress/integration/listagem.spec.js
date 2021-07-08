@@ -28,6 +28,7 @@ context('Listagem', () => {
 
         cy.visit('WebTable.html');
 
+        
         cy.get('div[role=row] div[role=gridcell]').eq(4).find('div').as('gridCellPhone');
         cy.get('@gridCellPhone').should('contain.text', '3129876543')
     });
