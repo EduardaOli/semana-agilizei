@@ -11,6 +11,7 @@ Given(/^que o site não possui registro$/, () => {
     }).as('getNewtable');
 });
 
+
 When(/^acessar a listagem$/, () => {
     cy.visit('WebTable.html');
 });
