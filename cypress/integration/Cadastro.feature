@@ -1,10 +1,10 @@
 #language: pt
-Funcionalidade: Cadastro
+Funcionalidade: cadastro
 
-    Como usuário, desejo realizar um Cadastro
-    Para que possa acessar o sistema
+Como usuario, desejp realizar um cadastro
+Para que possa acessar o sistema
 
-Cenario: Cadastrar de novo usuário
+Cenario: Cadastro de usuario no site
     Dado que acesso o site
     Quando informar meus dados
     E salvar

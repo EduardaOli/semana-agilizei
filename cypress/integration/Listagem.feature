@@ -1,6 +1,6 @@
 #language: pt
 
-Funcionalidade: Listagem
+Funcionalidade: listagem
 
     Como usuário, desejo acessr a listagem 
     Para que possa visualizar meus dados de Cadastro
