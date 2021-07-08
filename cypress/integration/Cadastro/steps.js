@@ -51,7 +51,7 @@ When(/^informar meus dados$/, () => {
         cy.get('input#firstpassword').type('Oli@120699');
         cy.get('input#secondpassword').type('Oli@120699');
 
-        cy.get('input#imagesrc').attachFile('imagem.png');   
+        cy.get('input#imagesrc').attachFile('upload.png');   
 
 	
 });
