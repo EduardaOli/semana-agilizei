@@ -1,0 +1,154 @@
+[
+  {
+    "description": "    Como usuário, desejo realizar um Cadastro\n    Para que possa acessar o sistema",
+    "keyword": "Funcionalidade",
+    "name": "Cadastro",
+    "line": 2,
+    "id": "cadastro",
+    "tags": [],
+    "uri": "Cadastro.feature",
+    "elements": [
+      {
+        "id": "cadastro;cadastrar-de-novo-usuário",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Cadastrar de novo usuário",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 8,
+            "name": "que acesso o site",
+            "result": {
+              "status": "passed",
+              "duration": 10114000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 9,
+            "name": "informar meus dados",
+            "result": {
+              "status": "passed",
+              "duration": 4297000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 10,
+            "name": "salvar",
+            "result": {
+              "status": "passed",
+              "duration": 209000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Entao ",
+            "line": 11,
+            "name": "devo ser cadastrado com sucesso",
+            "result": {
+              "status": "passed",
+              "duration": 8116000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "    Como usuário, desejo acessr a listagem \n    Para que possa visualizar meus dados de Cadastro",
+    "keyword": "Funcionalidade",
+    "name": "Listagem",
+    "line": 3,
+    "id": "listagem",
+    "tags": [],
+    "uri": "Listagem.feature",
+    "elements": [
+      {
+        "id": "listagem;listagem-sem-registros",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Listagem sem registros",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que o site não possui registro",
+            "result": {
+              "status": "passed",
+              "duration": 22949000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 10,
+            "name": "acessar a listagem",
+            "result": {
+              "status": "passed",
+              "duration": 2585000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Entao ",
+            "line": 11,
+            "name": "devo visualizar a listagem vazia",
+            "result": {
+              "status": "passed",
+              "duration": 32000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "listagem;listagem-com-um-registro",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Listagem com um registro",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 14,
+            "name": "que o site possui apenas um registro",
+            "result": {
+              "status": "passed",
+              "duration": 66000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 15,
+            "name": "acessar a listagem",
+            "result": {
+              "status": "passed",
+              "duration": 3173000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Entao ",
+            "line": 16,
+            "name": "devo visualizar apenas um registro",
+            "result": {
+              "status": "failed",
+              "error_message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `div[role=row] div[role=gridcell]`, but never found it.\n    at Context.eval (http://demo.automationtesting.in/__cypress/tests?p=cypress\\integration\\All.features:149:6)\n    at Context.resolveAndRunStepDefinition (http://demo.automationtesting.in/__cypress/tests?p=cypress\\integration\\All.features:18415:9)\n    at Context.eval (http://demo.automationtesting.in/__cypress/tests?p=cypress\\integration\\All.features:17744:35)"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
