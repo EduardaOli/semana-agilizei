@@ -5,6 +5,33 @@ let Chance = require('chance');
 let chance = new Chance();
 
 
+Given(/^que acesso o site$/, () => {
+	cy.server()
+        cy.route({
+            method: 'POST',
+            url: '**/api/1/databases/userdetails/collections/newtable?**',
+            status: 200,
+            response: {}
+        }).as('postNewtable');
+
+        cy.route({
+            method: 'POST', 
+            url: '**/api/1/databases/userdetails/collections/usertable?**', 
+            status: 200, 
+            response: {}
+        }).as('postUsertable');
+
+        cy.route({
+            method: 'GET',
+            url: '**/api/1/databases/userdetails/collections/newtable?**',
+            status: 200,
+            response: {}
+        }).as('getNewtable');
+
+
+        cy.visit('Register.html');
+});
+
 When(/^informar meus dados$/, () => {
     cy.get('input[placeholder= "First Name"]').type(chance.first());
         cy.get('input[ng-model^=Last]').type(chance.last());
@@ -25,7 +52,7 @@ When(/^informar meus dados$/, () => {
         cy.get('input#secondpassword').type('Oli@120699');
 
         cy.get('input#imagesrc').attachFile('imagem.png');   
-         
+
 	
 });
 
